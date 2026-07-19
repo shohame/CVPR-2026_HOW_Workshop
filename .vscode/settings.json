@@ -19,5 +19,35 @@
       "args": ["-ExecutionPolicy", "Bypass"]
     }
   },
-  "terminal.integrated.defaultProfile.windows": "PowerShell (.venv)"
+  "terminal.integrated.defaultProfile.windows": "PowerShell (.venv)",
+  "chat.tools.terminal.autoApprove": {
+    "/^winget install --id AstralSoftware\\.UV -e --accept-package-agreements --accept-source-agreements; winget install --id Oven-sh\\.Bun -e --accept-package-agreements --accept-source-agreements$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^py -3\\.12 -m pip install uv$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^Get-Command bun \\| Format-List Source,Version,Name$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^py -3\\.12 -m site --user-base$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^if \\(-not \\(Test-Path workbench\\)\\) \\{ git clone https://github\\.com/ndif-team/workbench\\.git workbench \\}; if \\(-not \\(Test-Path nnsightful\\)\\) \\{ git clone https://github\\.com/AdamBelfki3/nnsightful\\.git nnsightful \\}$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^Set-Location \"d:\\\\work\\\\python\\\\CVPR-2026_HOW_Workshop_11\\\\workbench\"; \\.\\\\\\.venv\\\\Scripts\\\\python\\.exe -c \"import fastapi, transformers, nnsight; print\\('backend ok'\\)\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^& \"C:\\\\Users\\\\shohame\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\Oven-sh\\.Bun_Microsoft\\.Winget\\.Source_8wekyb3d8bbwe\\\\bun-windows-x64\\\\bun\\.exe\" --help$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
 }
